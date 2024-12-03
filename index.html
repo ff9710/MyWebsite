@@ -1,5 +1,44 @@
 <html>
 <head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Color Toggle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Normal text color */
+    body.normal-text {
+      color: black;
+    }
+
+    /* Light text color */
+    body.light-text {
+      color: white;
+    }
+
+    /* Dark background for contrast */
+    body {
+      background-color: #121212;
+    }
+
+    .toggle-button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .toggle-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
   <style>
      body{
          text-align: center;
@@ -9,14 +48,24 @@
       }
   </style>
 </head>
+<body class="normal-text">
 
+  <button class="toggle-button" onclick="toggleTextColor()">Toggle Text Color</button>
+
+  <script>
+    function toggleTextColor() {
+      const body = document.body;
+      body.classList.toggle('light-text');
+      body.classList.toggle('normal-text');
+    }
+  </script>
 <body>
 <h1 style="font-size:6vw">All about Jamaica</h1>
 
 <img=src"">
 
-  <p><Font face="Arial Black"> Jamaica is an island country located in the Caribbean Sea and
-  it is the largest English-speaking island in the Caribbean and the third largest overall. The island spans 4,400 square miles! Jamaica is populated by over 2 million people, largely descendents of the freed African slaves brought over to the island by the spanish and British.
+  <p><Font face="Arial Black"> Jamaica is an island country located in the Caribbean Sea.
+  Jamaica is the largest English-speaking island in the Caribbean and the third largest overall. The island spans 4,400 square miles. Jamaica is populated by over 2 million people, largely descendents of the freed African slaves brought over to the island by the spanish and British.
   In this website I will tell you where to travel in Jamaica and the different laws</p>
 
 
@@ -24,3 +73,5 @@
 </body>
 
 </html>
+
+
